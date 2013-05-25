@@ -1,0 +1,14 @@
+!!!
+%html
+  %head
+    %title Place
+    = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
+    = csrf_meta_tags
+
+  %body
+    .header
+    .container
+      = yield
+
+    = javascript_include_tag "//maps.googleapis.com/maps/api/js?key=AIzaSyCNfxNrII-ey5rvy2xVNMfI9f9qV1pwWVI&sensor=true"
+    = javascript_include_tag "application", "data-turbolinks-track" => true
